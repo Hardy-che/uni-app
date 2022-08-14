@@ -12,7 +12,7 @@
 				<input type="number" placeholder="请输入验证码" />
 				<button class="getCodeBtn" type="primary" @click="getCode">{{!countCode? '获取验证码':countCode + 's'}}</button>
 			</view>
-			<button class="loginBtn">登陆</button>
+			<button class="loginBtn" @click="goto('../home/home')">登陆</button>
 			<view class="changeLog">
 				<text @click="changeLogWay" style="color: darkturquoise;">账号密码登陆</text>
 				<text>|</text>
@@ -29,7 +29,7 @@
 				<input type="password" placeholder="请输入密码" />
 				<text class="forgetPwd">忘记密码</text>
 			</view>
-			<button class="loginBtn">登陆</button>
+			<button class="loginBtn" @click="goto('../home/home')">登陆</button>
 			<view class="changeLog">
 				<text @click="changeLogWay" style="color: darkturquoise;">手机验证码登陆</text>
 				<text>|</text>
@@ -82,7 +82,7 @@
 			},
 			
 			goto(url) {
-				uni.navigateTo({
+				uni.switchTab({
 					url:url
 				})
 			}
@@ -138,6 +138,7 @@
 	}
 	
 	.socialPlatform{
+		
 		display: flex;
 		justify-content: center;
 		margin: 20px 0;

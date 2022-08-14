@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "用户登陆",
-  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
   "usingComponents": {}
 }
